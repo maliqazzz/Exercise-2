@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator</title>
+    </head>
+    <script type="text/javascript">
+    function kalkulator() {
+        
+        var angkaPertama = parseFloat(document.getElementById("angkaPertama").value)
+        var angkaKedua   = parseFloat(document.getElementById("angkaKedua").value)
+
+        var opProses     = document.getElementById("opProses").value
+
+        if (opProses === "+"){
+            document.getElementById('hasil').value = angkaPertama+angkaKedua;
+        }
+        if (opProses === "-"){
+            document.getElementById('hasil').value = angkaPertama-angkaKedua;
+        }
+        if (opProses === "x"){
+            document.getElementById('hasil').value = angkaPertama*angkaKedua;
+        }
+        if (opProses === "/"){
+            document.getElementById('hasil').value = angkaPertama/angkaKedua;
+        }
+        if (opProses === "%"){
+            document.getElementById('hasil').value = angkaPertama%angkaKedua;
+        }
+    }
+
+    </script>
+    <body>
+        <h4>Kalkulator</h4>
+        <input type=”text” id=”angkaPertama”>
+        <select id=”opProses”>
+            <option value=”+”>+</option>
+            <option value=”-”>-</option>
+            <option value=”x”>x</option>
+            <option value=”/”>/</option>
+            <option value="%">%</option>
+        </select>
+        <input type=”text” id=”angkaKedua”>
+        <input type="button" value="=" onclick="kalkulator();">
+        <input type=”text” id="hasil">
+    </body>
+</html>
